@@ -5,5 +5,41 @@
 @import "media";
 
 body {
-  background-color: red;
+  font-family: "TT Travels";
+  font-weight: 300;
+  font-size: 46px;
+  cursor: none;
+}
+
+.header {
+  letter-spacing: -1px;
+  font-family: "GT America-bold";
+}
+
+.main-slider {
+  font-weight: 100;
+  font-family: "TT Travels-light";
+}
+
+/*for circle cursor*/
+
+.cursor {
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  //transition: all 0.5s ease-in-out; /*connected to cursor circle to*/
+  //transition-property: background, transform;
+  //transform-origin: 75% 75%; /*cursor at center*/
+}
+
+.cursor-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
