@@ -1,4 +1,11 @@
 $(function () {});
+
+const photoRotator = new Rotator(".photo-frame", [
+  "/img/image0.png",
+  "/img/image1.png",
+  "/img/image2.png",
+]);
+
 //cursor animations
 const mouse = document.querySelector(".cursor");
 
