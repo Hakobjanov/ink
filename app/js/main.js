@@ -44,9 +44,9 @@ const photoRotator = new Rotator(".photo-frame", [
 ]);
 
 //parallax js
-let parallaxInstance = new Parallax(photoFrameWrapper, {
-  relativeInput: true,
-});
+// let parallaxInstance = new Parallax(photoFrameWrapper, {
+//   relativeInput: true,
+// });
 
 //cursor animations
 const mouse = document.querySelector(".cursor");

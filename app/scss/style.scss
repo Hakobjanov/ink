@@ -148,15 +148,15 @@ a {
 }
 
 .swiper-container {
-  width: 3000px;
+  width: 2850px;
   height: 60%;
   position: absolute;
   top: 20%;
-  margin-left: -780px;
+  margin-left: -662px;
+  //margin-left: -727px;
 }
 
 .swiper-slide {
-  width: 1000px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,6 +172,17 @@ a {
 .swiper-slide-next {
   color: rgba(88, 3, 0, 0.9);
   -webkit-text-stroke: 0 transparent;
+}
+
+.swiper-slide-active {
+  transform: rotate(-1.5deg);
+  //padding-right: 200px;
+}
+
+.swiper-slide-duplicate-prev {
+  //margin-left: 100px;
+  //padding-left: 275px;
+  transform: rotate(1.5deg);
 }
 
 /*for circle cursor*/
