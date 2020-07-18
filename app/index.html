@@ -3,10 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
-    <title>Surf</title>
+    <title>Ink Lingerie</title>
   </head>
   <body>
+    <div class="bg-line">
+      <svg
+        width="610"
+        height="728"
+        viewBox="0 0 610 728"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="blue-line"
+      >
+        <path
+          d="M139.416 31.4647C-159.248 309.376 101.471 367.764 214.964 1C336.277 136.37 767.08 317.52 345.08 103.2C594.544 524.358 643.701 254.041 589.613 727.477"
+          stroke="#2828BD"
+        />
+      </svg>
+    </div>
+
     <header class="header">
       <a href="#" class="logo">
         LogoLogo
@@ -21,18 +41,37 @@
         </ul>
       </nav>
     </header>
-    <main class="main-slider">Main-slider | Commercial</main>
 
-    <div class="photo-frame-wrapper">
-      <div class="photo-frame frame-1"></div>
-      <div class="photo-frame frame-2"></div>
-      <div class="photo-frame frame-3"></div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          Ink Lingerie
+        </div>
+        <div class="swiper-slide">
+          Ink Lingerie
+        </div>
+        <div class="swiper-slide">
+          Ink Lingerie
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-frame-wrapper parallax">
+      <div data-depth="0.3">
+        <div class="photo-frame frame-1 transparent"></div>
+      </div>
+      <div data-depth="-0.1">
+        <div class="photo-frame frame-2 transparent"></div>
+      </div>
+      <div data-depth="0.3">
+        <div class="photo-frame frame-3 transparent"></div>
+      </div>
     </div>
 
     <div class="social">Social</div>
 
     <div class="cursor">
-      <span class="cursor-text"></span>
+      <span class="cursor-text">Drag me</span>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -41,6 +80,8 @@
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
       crossorigin="anonymous"
     ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/libs.min.js"></script>
     <script src="./js/rotator.js"></script>
     <script src="./js/main.js"></script>
