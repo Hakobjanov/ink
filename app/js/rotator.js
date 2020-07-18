@@ -10,7 +10,6 @@ function Rotator(frameSelector, imageUrls, options) {
   this.frames.forEach((frame, i) => {
     const imageClones = images.map((image) => image.cloneNode());
     imageClones.forEach((img, j) => {
-      //img.setAttribute("data-depth", 0.2);
       if (i !== j) {
         img.classList.add("transparent");
       }

@@ -23,6 +23,7 @@ let mySwiper = new Swiper(".swiper-container", {
 let lastSlideIndex = 0;
 
 mySwiper.on("slideChange", () => {
+  console.log(mySwiper.activeIndex.classList);
   if (
     mySwiper.activeIndex === lastSlideIndex - 1 ||
     mySwiper.activeIndex - lastSlideIndex > 1
@@ -58,7 +59,7 @@ function cursor(e) {
 
 function activeCursor(e) {
   const item = e.target;
-  if (item.classList.contains("menu-link")) {
+  if (item.classList.contains("menu-link") || item.classList.contains("logo")) {
     console.log(item.classList);
     mouse.classList.add("mouse-active");
   } else {
