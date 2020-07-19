@@ -1,0 +1,62 @@
+@media screen and (max-width: 1441px) {
+}
+
+@media screen and (max-width: 1025px) {
+  body {
+    .bg-line {
+      left: 259px;
+      top: 32px;
+      svg {
+        width: 506px;
+        height: 605px;
+      }
+    }
+
+    .photo-frame-wrapper {
+      .frame-1 {
+        width: 163px;
+        height: 226px;
+        transform: rotate(1.1deg);
+        top: 191px;
+        left: 162px;
+      }
+
+      .frame-1 img:first-child {
+        transform: scale(2.05);
+        top: 120px;
+      }
+
+      .frame-2 {
+        width: 359px;
+        height: 530px;
+        transform: rotate(1.5deg);
+        top: 82px;
+        left: 339px;
+      }
+      .frame-1 img,
+      .frame-2 img {
+        object-fit: cover;
+      }
+      .frame-3 {
+        width: 234px;
+        height: 162px;
+        transform: rotate(2.03deg);
+        top: 409px;
+        left: 644px;
+      }
+    }
+
+    .swiper-container {
+      width: 1915px;
+      height: 62%;
+      top: 18%;
+      margin-left: -446px;
+
+      .swiper-slide {
+        font-size: 96px;
+        letter-spacing: 5px;
+        font-stretch: extra-expanded;
+      }
+    }
+  }
+}

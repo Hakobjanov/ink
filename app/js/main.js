@@ -19,6 +19,11 @@ blueLine.addEventListener("animationend", () => {
 let mySwiper = new Swiper(".swiper-container", {
   loop: true,
   slidesPerView: 3,
+  breakpoints: {
+    1440: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 let lastSlideIndex = 0;
@@ -57,7 +62,12 @@ function cursor(e) {
 
 function activeCursor(e) {
   const item = e.target;
-  if (item.classList.contains("menu-link") || item.classList.contains("logo")) {
+  if (
+    item.classList.contains("menu-link") ||
+    item.classList.contains("logo") ||
+    item.classList.contains("inst") ||
+    item.classList.contains("fb")
+  ) {
     console.log(item.classList);
     mouse.classList.add("mouse-active");
   } else {

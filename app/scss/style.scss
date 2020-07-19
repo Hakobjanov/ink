@@ -33,6 +33,7 @@ a {
   position: absolute;
   left: 473px;
   top: 7px;
+  z-index: -1;
 }
 
 .blue-line {
@@ -77,13 +78,10 @@ a {
   line-height: 21px;
 }
 
-.menu-link:hover {
+.menu-link:hover,
+.inst:hover,
+.fb:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-}
-
-.main-slider {
-  font-weight: 100;
-  font-family: "TT Travels-light";
 }
 
 .photo-frame {
@@ -164,41 +162,41 @@ a {
   top: 20%;
   margin-left: -662px;
   //margin-left: -727px;
-}
 
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Schnyder Cond XL Demi";
-  text-transform: uppercase;
-  font-size: 126px;
-  letter-spacing: 5px;
-  font-stretch: extra-expanded;
-  color: transparent; /* прозрачный цвет букв */
-  -webkit-text-stroke: 1px rgba(88, 3, 0, 0.9);
-  animation: textAppear 3s linear;
-}
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Schnyder Cond XL Demi";
+    text-transform: uppercase;
+    font-size: 126px;
+    letter-spacing: 5px;
+    font-stretch: extra-expanded;
+    color: transparent; /* прозрачный цвет букв */
+    -webkit-text-stroke: 1px rgba(88, 3, 0, 0.9);
+    animation: textAppear 3s linear;
+  }
 
-.swiper-container:first-child {
-  animation: fromLeft 1.5s ease;
-}
+  .swiper-container:first-child {
+    animation: fromLeft 1.5s ease;
+  }
 
-.swiper-slide-next {
-  color: rgba(88, 3, 0, 0.9);
-}
+  .swiper-slide-next {
+    color: rgba(88, 3, 0, 0.9);
+  }
 
-.swiper-slide-active {
-  transform: rotate(-1.5deg);
-  //animation: fromLeft 1.5s ease;
-  //padding-right: 200px;
-}
+  .swiper-slide-active {
+    transform: rotate(-1.5deg);
+    //animation: fromLeft 1.5s ease;
+    //padding-right: 200px;
+  }
 
-.swiper-slide-duplicate-prev {
-  //margin-left: 100px;
-  //padding-left: 275px;
-  transform: rotate(1.5deg);
-  //animation: fromRight 1.5s ease;
+  .swiper-slide-duplicate-prev {
+    //margin-left: 100px;
+    //padding-left: 275px;
+    transform: rotate(1.5deg);
+    //animation: fromRight 1.5s ease;
+  }
 }
 
 /*for circle cursor*/
@@ -239,4 +237,25 @@ a {
   opacity: 1;
 }
 
-/*animation*/
+/*social styles*/
+.social {
+  width: 112px;
+
+  position: absolute;
+  bottom: 47px;
+  left: 48px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "TT Travels-light";
+  font-size: 11px;
+}
+
+.inst:after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 33px;
+  width: 56px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.24);
+}
