@@ -1,4 +1,5 @@
 //swiper
+const body = document.querySelector(".body");
 const swiperContainer = document.querySelector(".swiper-container");
 const cursorText = document.querySelector(".cursor-text");
 const blueLine = document.querySelector(".blue-line");
@@ -23,7 +24,6 @@ let mySwiper = new Swiper(".swiper-container", {
 let lastSlideIndex = 0;
 
 mySwiper.on("slideChange", () => {
-  console.log(mySwiper.activeIndex.classList);
   if (
     mySwiper.activeIndex === lastSlideIndex - 1 ||
     mySwiper.activeIndex - lastSlideIndex > 1
@@ -34,8 +34,6 @@ mySwiper.on("slideChange", () => {
   }
   lastSlideIndex = mySwiper.activeIndex;
 });
-
-//const scene = document.querySelector(".frame-1");
 
 const photoRotator = new Rotator(".photo-frame", [
   "/img/image0.png",
@@ -71,6 +69,14 @@ function activeCursor(e) {
     cursorText.classList.remove("cursor-drag");
   }
 }
+
+//removing preload class
+// $(window).load(function () {
+//   $("body").removeClass("preload");
+// });
+// window.addEventListener("load", () => {
+//   body.classList.remove("preload");
+// });
 
 //event listeners
 window.addEventListener("mousemove", cursor);
