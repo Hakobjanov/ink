@@ -1,10 +1,18 @@
 //swiper
 const body = document.querySelector(".body");
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
 const swiperContainer = document.querySelector(".swiper-container");
 const cursorText = document.querySelector(".cursor-text");
 const blueLine = document.querySelector(".blue-line");
 const photoFrameWrapper = document.querySelector(".photo-frame-wrapper");
 const photoFrames = document.querySelectorAll(".photo-frame");
+const circleCursor = document.querySelector(".cursor");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("cross");
+  menu.classList.toggle("menu-active");
+});
 
 blueLine.addEventListener("animationend", () => {
   photoFrames[1].classList.remove("transparent");

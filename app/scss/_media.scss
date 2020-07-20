@@ -1,4 +1,12 @@
 @media screen and (max-width: 1441px) {
+  body {
+    .swiper-container {
+      width: 2710px;
+      height: 65%;
+      top: 16.5%;
+      margin-left: -636px;
+    }
+  }
 }
 
 @media screen and (max-width: 1025px) {
@@ -16,47 +24,227 @@
       .frame-1 {
         width: 163px;
         height: 226px;
-        transform: rotate(1.1deg);
         top: 191px;
         left: 162px;
-      }
-
-      .frame-1 img:first-child {
-        transform: scale(2.05);
-        top: 120px;
       }
 
       .frame-2 {
         width: 359px;
         height: 530px;
-        transform: rotate(1.5deg);
         top: 82px;
         left: 339px;
       }
-      .frame-1 img,
-      .frame-2 img {
-        object-fit: cover;
-      }
+
       .frame-3 {
         width: 234px;
         height: 162px;
-        transform: rotate(2.03deg);
         top: 409px;
         left: 644px;
       }
     }
 
     .swiper-container {
-      width: 1915px;
+      width: 1920px;
       height: 62%;
       top: 18%;
-      margin-left: -446px;
+      margin-left: -447px;
 
       .swiper-slide {
         font-size: 96px;
-        letter-spacing: 5px;
-        font-stretch: extra-expanded;
       }
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  body {
+    .bg-line {
+      left: 70px;
+      top: 85px;
+      svg {
+        width: 628px;
+        height: 789px;
+      }
+    }
+
+    .header {
+      padding: 32px 32px 0 32px;
+    }
+
+    .photo-frame-wrapper {
+      .frame-1 {
+        top: 344px;
+        left: 29px;
+      }
+
+      .frame-2 {
+        top: 227px;
+        left: 196px;
+      }
+
+      .frame-3 {
+        top: 555px;
+        left: 509px;
+      }
+    }
+
+    .swiper-container {
+      width: 1683px;
+      height: 66.5%;
+      top: 18%;
+      margin-left: -461px;
+
+      .swiper-slide {
+        font-size: 96px;
+      }
+    }
+
+    .social {
+      bottom: 32px;
+      left: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 415px) {
+  body {
+    .bg-line {
+      left: 11px;
+      top: 51px;
+      svg {
+        width: 392px;
+        height: 493px;
+      }
+    }
+    .header {
+      padding: 32px 24px 0 24px;
+    }
+
+    .menu {
+      height: 100vh;
+      width: 100%;
+      background-color: #000;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 98;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+      li {
+        margin-bottom: 35px;
+
+        .menu-link {
+          font-size: 22px;
+          color: #fff;
+          border-bottom: 1px solid transparent;
+          transition: all 0.3s ease-in-out;
+        }
+        .menu-link:hover {
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+
+    .menu-active {
+      right: 0;
+    }
+
+    .cross .line1 {
+      transform: rotateZ(45deg) translate(0%, 0%);
+      background: #fff;
+    }
+
+    .cross .line2 {
+      transform: rotateZ(-45deg) translate(25%, -440%);
+      background: #fff;
+    }
+
+    .active-menu-cursor {
+      border: 1px solid #fff;
+    }
+
+    .burger {
+      opacity: 1;
+      position: relative;
+      right: -5px;
+    }
+
+    .photo-frame-wrapper {
+      .frame-1 {
+        display: none;
+      }
+
+      .frame-2 {
+        width: 273px;
+        height: 403px;
+        top: 108px;
+        left: 71px;
+      }
+
+      .frame-3 {
+        display: none;
+      }
+    }
+
+    .swiper-container {
+      width: 885px;
+      height: 63.5%;
+      top: 18%;
+      margin-left: -237px;
+
+      .swiper-slide {
+        font-size: 48px;
+      }
+    }
+    .social {
+      bottom: 24px;
+      left: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    .bg-line {
+      left: 18px;
+      top: 62px;
+      svg {
+        width: 339px;
+        height: 429px;
+      }
+    }
+    .header {
+      padding: 16px 20px 0 20px;
+    }
+
+    .menu-active {
+      right: 100px;
+    }
+
+    .photo-frame-wrapper {
+      .frame-2 {
+        width: 250px;
+        height: 369px;
+        top: 100px;
+        left: 58px;
+      }
+    }
+
+    .swiper-container {
+      width: 830px;
+      height: 68%;
+      margin-left: -227px;
+
+      .swiper-slide {
+        font-size: 48px;
+      }
+    }
+    .social {
+      bottom: 20px;
+      left: 20px;
     }
   }
 }
