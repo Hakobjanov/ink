@@ -34,7 +34,7 @@ let mySwiper = new Swiper(".swiper-container", {
   },
 });
 
-let lastSlideIndex = 0;
+let lastSlideIndex = 3;
 
 mySwiper.on("slideChange", () => {
   if (

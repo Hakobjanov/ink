@@ -19,11 +19,11 @@ function Rotator(frameSelector, imageUrls, options) {
 }
 
 Rotator.prototype.goLeft = function () {
-  this.shift(-1);
+  this.shift(1);
 };
 
 Rotator.prototype.goRight = function () {
-  this.shift(1);
+  this.shift(-1);
 };
 
 Rotator.prototype.shift = function (offset = 1) {
