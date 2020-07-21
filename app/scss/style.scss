@@ -5,6 +5,7 @@
 
 @import "media";
 
+/*global styles*/
 *,
 *:before,
 *:after {
@@ -15,7 +16,6 @@
 
 body {
   height: 100vh;
-  width: 100vw;
   overflow: hidden;
   cursor: none;
 }
@@ -27,7 +27,6 @@ li {
 a {
   text-decoration: none;
   color: #000;
-  //cursor: none;
 }
 
 .bg-line {
@@ -37,12 +36,50 @@ a {
   z-index: -1;
 }
 
+/*styles for circle cursor*/
+.cursor {
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  transition-property: background, transform;
+  transform-origin: 5% 5%;
+  z-index: 99;
+}
+
+.cursor.mouse-active {
+  border: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+.cursor-text {
+  width: 39px;
+  position: absolute;
+  font-family: "TT Travels-light";
+  font-size: 8px;
+  line-height: 10px;
+  text-transform: uppercase;
+  top: -8px;
+  left: 15px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.cursor-drag {
+  opacity: 1;
+}
+
+/*blue background line with animation*/
 .blue-line {
   stroke-dasharray: 2000px;
   stroke-dashoffset: 2000px;
   animation: drawLine 4s linear forwards;
 }
 
+/*header styles*/
 .header {
   display: flex;
   justify-content: space-between;
@@ -50,11 +87,12 @@ a {
 }
 
 .logo {
-  letter-spacing: -1px;
   font-family: "GT America-bold";
   font-size: 16px;
   height: 18px;
   animation: logoAppear 1.5s ease;
+  transform: scaleX(1.35);
+  transform-origin: left;
 }
 
 .nav {
@@ -63,6 +101,7 @@ a {
 
 .menu {
   font-family: "TT Travels-light";
+  text-align-last: right;
 
   .menu li:first-child {
     animation: fromRight 1s ease;
@@ -104,6 +143,12 @@ a {
   position: absolute;
   z-index: 999;
   cursor: pointer;
+}
+
+/*photos with parallax styles*/
+.photo-frame-wrapper {
+  top: -112px;
+  left: 0;
 }
 
 .photo-frame {
@@ -163,27 +208,19 @@ a {
 .frame-3 img:first-child {
   object-fit: cover;
   object-position: top;
-  // transform: scale(1.2);
-
-  // top: 70px;
 }
 
 .transparent {
   opacity: 0;
 }
 
-.parallax {
-  top: -112px;
-  left: 0;
-}
-
+/*swiper container styles*/
 .swiper-container {
   width: 2850px;
   height: 72%;
   position: absolute;
   top: 20%;
   margin-left: -662px;
-  //margin-left: -727px;
 
   .swiper-slide {
     display: flex;
@@ -192,9 +229,9 @@ a {
     font-family: "Schnyder Cond XL Demi";
     text-transform: uppercase;
     font-size: 126px;
-    letter-spacing: 5px;
-    font-stretch: extra-expanded;
-    color: transparent; /* прозрачный цвет букв */
+    letter-spacing: 2px;
+    transform: scaleX(1.25);
+    color: transparent;
     -webkit-text-stroke: 1px rgba(88, 3, 0, 0.9);
     animation: textAppear 3s linear;
   }
@@ -209,54 +246,11 @@ a {
 
   .swiper-slide-active {
     transform: rotate(-1.5deg);
-    //animation: fromLeft 1.5s ease;
-    //padding-right: 200px;
   }
 
   .swiper-slide-duplicate-prev {
-    //margin-left: 100px;
-    //padding-left: 275px;
     transform: rotate(1.5deg);
-    //animation: fromRight 1.5s ease;
   }
-}
-
-/*for circle cursor*/
-
-.cursor {
-  width: 17px;
-  height: 17px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: all 0.5s ease-in-out; /*connected to cursor circle to*/
-  transition-property: background, transform;
-  transform-origin: 5% 5%; /*cursor at center*/
-  z-index: 99;
-}
-
-.cursor.mouse-active {
-  //transform: scale(1.3);
-  border: 2px solid rgba(0, 0, 0, 0.8);
-}
-
-.cursor-text {
-  width: 39px;
-  position: absolute;
-  font-family: "TT Travels-light";
-  font-size: 8px;
-  line-height: 10px;
-  text-transform: uppercase;
-  top: -8px;
-  left: 15px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.cursor-drag {
-  opacity: 1;
 }
 
 /*social styles*/

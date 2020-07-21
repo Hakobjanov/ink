@@ -1,5 +1,6 @@
-//swiper
+//elements
 const body = document.querySelector(".body");
+const mouse = document.querySelector(".cursor");
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 const swiperContainer = document.querySelector(".swiper-container");
@@ -8,6 +9,10 @@ const blueLine = document.querySelector(".blue-line");
 const photoFrameWrapper = document.querySelector(".photo-frame-wrapper");
 const photoFrames = document.querySelectorAll(".photo-frame");
 const circleCursor = document.querySelector(".cursor");
+
+//event listeners
+window.addEventListener("mousemove", cursor);
+window.addEventListener("mouseover", activeCursor);
 
 burger.addEventListener("click", () => {
   burger.classList.toggle("cross");
@@ -24,6 +29,7 @@ blueLine.addEventListener("animationend", () => {
   }, 500);
 });
 
+/*swiper slider init*/
 let mySwiper = new Swiper(".swiper-container", {
   loop: true,
   slidesPerView: 3,
@@ -36,6 +42,7 @@ let mySwiper = new Swiper(".swiper-container", {
 
 let lastSlideIndex = 3;
 
+/*rotating photos with swiper*/
 mySwiper.on("slideChange", () => {
   if (
     mySwiper.activeIndex === lastSlideIndex - 1 ||
@@ -48,22 +55,20 @@ mySwiper.on("slideChange", () => {
   lastSlideIndex = mySwiper.activeIndex;
 });
 
+/*photo rotator*/
 const photoRotator = new Rotator(".photo-frame", [
   "img/image0.png",
   "img/image1.png",
   "img/image2.png",
 ]);
 
-//parallax js
-// let parallaxInstance = new Parallax(photoFrameWrapper, {
-//   relativeInput: true,
-// });
+//parallax js init
+let parallaxInstance = new Parallax(photoFrameWrapper, {
+  relativeInput: true,
+});
 
-//cursor animations
-const mouse = document.querySelector(".cursor");
-
+//cursor on move and on hover
 function cursor(e) {
-  //   console.log(wheel);
   mouse.style.top = e.y + "px";
   mouse.style.left = e.x + "px";
 }
@@ -87,15 +92,3 @@ function activeCursor(e) {
     cursorText.classList.remove("cursor-drag");
   }
 }
-
-//removing preload class
-// $(window).load(function () {
-//   $("body").removeClass("preload");
-// });
-// window.addEventListener("load", () => {
-//   body.classList.remove("preload");
-// });
-
-//event listeners
-window.addEventListener("mousemove", cursor);
-window.addEventListener("mouseover", activeCursor);

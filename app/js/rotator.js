@@ -18,14 +18,7 @@ function Rotator(frameSelector, imageUrls, options) {
   });
 }
 
-Rotator.prototype.goLeft = function () {
-  this.shift(1);
-};
-
-Rotator.prototype.goRight = function () {
-  this.shift(-1);
-};
-
+//photo rotator function
 Rotator.prototype.shift = function (offset = 1) {
   this.offset = (this.offset + this.length - offset) % this.length;
   this.frames.forEach((frame, i) => {
@@ -34,4 +27,12 @@ Rotator.prototype.shift = function (offset = 1) {
       "transparent"
     );
   });
+};
+
+Rotator.prototype.goLeft = function () {
+  this.shift(1);
+};
+
+Rotator.prototype.goRight = function () {
+  this.shift(-1);
 };
