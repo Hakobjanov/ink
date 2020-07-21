@@ -49,9 +49,9 @@ mySwiper.on("slideChange", () => {
 });
 
 const photoRotator = new Rotator(".photo-frame", [
-  "/img/image0.png",
-  "/img/image1.png",
-  "/img/image2.png",
+  "img/image0.png",
+  "img/image1.png",
+  "img/image2.png",
 ]);
 
 //parallax js
@@ -81,7 +81,7 @@ function activeCursor(e) {
   } else {
     mouse.classList.remove("mouse-active");
   }
-  if (e.path.includes(swiperContainer)) {
+  if ((e.path || e.composedPath()).includes(swiperContainer)) {
     cursorText.classList.add("cursor-drag");
   } else {
     cursorText.classList.remove("cursor-drag");
